@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inflation Calculator | FinanceTools</title>
+    <meta name="description" content="Calculate inflation impact on purchasing power and investment returns. Professional inflation calculator for long-term financial planning and analysis.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <h1>FinanceTools</h1>
+                </a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="loans.html" class="nav-link">Loans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="income-tax.html" class="nav-link">Income & Tax</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="interest.html" class="nav-link">Interest</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="assets.html" class="nav-link">Assets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="retirement.html" class="nav-link">Retirement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="inflation.html" class="nav-link">Inflation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Inflation Calculator</h1>
+                <p>Understand how inflation affects your purchasing power and make informed financial decisions for long-term wealth preservation.</p>
+            </div>
+        </section>
+
+        <!-- Inflation Calculator -->
+        <section class="calculator-section">
+            <div class="container">
+                <h2 class="primary-color">Purchasing Power Calculator</h2>
+                <div class="calculator-container">
+                    <div class="calculator-form">
+                        <h3>Inflation Analysis</h3>
+                        <div class="form-group">
+                            <label for="current-value">Current Dollar Amount ($)</label>
+                            <input type="number" id="current-value" placeholder="10000" min="0" step="100">
+                        </div>
+                        <div class="form-group">
+                            <label for="inflation-rate">Annual Inflation Rate (%)</label>
+                            <input type="number" id="inflation-rate" placeholder="3.0" min="0" max="20" step="0.1">
+                        </div>
+                        <div class="form-group">
+                            <label for="years-ahead">Time Period (Years)</label>
+                            <input type="number" id="years-ahead" placeholder="10" min="1" max="50" step="1">
+                        </div>
+                        <button type="button" class="calculate-btn" onclick="calculateInflation()">Calculate Inflation Impact</button>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                            <em>Historical US inflation average: ~3.0% annually since 1913</em>
+                        </p>
+                    </div>
+                    <div class="calculator-results" id="inflation-results">
+                        <h3>Inflation Impact Results</h3>
+                        <p>Enter your values to see how inflation will affect the purchasing power of your money over time.</p>
+                    </div>
+                </div>
+
+                <div class="calculator-info">
+                    <h3>Understanding Inflation</h3>
+                    <p>Inflation is the rate at which the general level of prices for goods and services rises, and consequently, the purchasing power of currency falls. Understanding inflation is crucial for long-term financial planning and investment decisions.</p>
+                    
+                    <p><strong>Key inflation concepts:</strong></p>
+                    <ul>
+                        <li><strong>Consumer Price Index (CPI):</strong> Primary measure of inflation in the United States</li>
+                        <li><strong>Core Inflation:</strong> Excludes volatile food and energy prices</li>
+                        <li><strong>Purchasing Power:</strong> How much goods and services your money can buy</li>
+                        <li><strong>Real vs. Nominal Returns:</strong> Investment returns adjusted for inflation</li>
+                    </ul>
+                    
+                    <h4>Historical U.S. Inflation Rates</h4>
+                    <ul>
+                        <li><strong>1970s:</strong> High inflation period averaging 7.25% annually</li>
+                        <li><strong>1980s:</strong> Peak inflation of 13.5% in 1980, then declining</li>
+                        <li><strong>1990s-2000s:</strong> Stable period around 2-3% annually</li>
+                        <li><strong>2010s:</strong> Low inflation, often below 2% target</li>
+                        <li><strong>2020s:</strong> Recent surge to over 9% in 2022, moderating since</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Inflation Protection Strategies -->
+        <section class="calculator-section" style="background: #f8f9fa;">
+            <div class="container">
+                <h2 class="primary-color">Protecting Against Inflation</h2>
+                <div class="calculator-info">
+                    <h3>Investment Strategies for Inflation Protection</h3>
+                    <p>While you can't control inflation, you can protect your wealth by understanding which investments historically perform well during inflationary periods.</p>
+                    
+                    <h4>Inflation-Protected Investments</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                            <h5 style="color: #003366; margin-bottom: 0.5rem;">Treasury Inflation-Protected Securities (TIPS)</h5>
+                            <p>Government bonds that adjust principal based on inflation. Principal increases with inflation, decreases with deflation.</p>
+                            <ul style="font-size: 0.9rem;">
+                                <li>Direct inflation protection</li>
+                                <li>Government backing</li>
+                                <li>Available in 5, 10, and 30-year terms</li>
+                            </ul>
+                        </div>
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                            <h5 style="color: #003366; margin-bottom: 0.5rem;">Real Estate Investment Trusts (REITs)</h5>
+                            <p>Real estate often appreciates with inflation, and REITs provide liquid exposure to real estate markets.</p>
+                            <ul style="font-size: 0.9rem;">
+                                <li>Rental income tends to rise with inflation</li>
+                                <li>Property values often increase</li>
+                                <li>Dividend income potential</li>
+                            </ul>
+                        </div>
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                            <h5 style="color: #003366; margin-bottom: 0.5rem;">Commodities</h5>
+                            <p>Raw materials like gold, oil, and agricultural products often rise in price during inflationary periods.</p>
+                            <ul style="font-size: 0.9rem;">
+                                <li>Direct correlation with inflation</li>
+                                <li>Diversification benefits</li>
+                                <li>Available through ETFs and mutual funds</li>
+                            </ul>
+                        </div>
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                            <h5 style="color: #003366; margin-bottom: 0.5rem;">Stocks</h5>
+                            <p>Quality companies can often pass increased costs to consumers, maintaining profit margins during inflation.</p>
+                            <ul style="font-size: 0.9rem;">
+                                <li>Pricing power during inflation</li>
+                                <li>Long-term growth potential</li>
+                                <li>Dividend growth from quality companies</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h4>Inflation Impact on Different Assets</h4>
+                    <div style="overflow-x: auto; margin: 1.5rem 0;">
+                        <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+                            <thead>
+                                <tr style="background: #003366; color: white;">
+                                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Asset Type</th>
+                                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Inflation Impact</th>
+                                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Protection Level</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Cash & CDs</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Loses purchasing power</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Poor</td>
+                                </tr>
+                                <tr style="background: #f8f9fa;">
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Fixed-Rate Bonds</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Principal eroded by inflation</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Poor</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">TIPS</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Principal adjusts with CPI</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Excellent</td>
+                                </tr>
+                                <tr style="background: #f8f9fa;">
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Stocks</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Mixed, depends on company</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Good</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Real Estate</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Often appreciates with inflation</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Good</td>
+                                </tr>
+                                <tr style="background: #f8f9fa;">
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Commodities</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Often rises with inflation</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Good</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Real vs Nominal Returns -->
+        <section class="calculator-section">
+            <div class="container">
+                <h2 class="primary-color">Real vs. Nominal Investment Returns</h2>
+                <div class="calculator-info">
+                    <h3>Understanding Inflation-Adjusted Returns</h3>
+                    <p>When evaluating investment performance, it's crucial to understand the difference between nominal returns (what you see on statements) and real returns (adjusted for inflation).</p>
+                    
+                    <h4>Calculating Real Returns</h4>
+                    <p><strong>Real Return = Nominal Return - Inflation Rate</strong></p>
+                    <p>For example, if your investment earned 8% but inflation was 3%, your real return was only 5%.</p>
+                    
+                    <h4>Historical Real Returns by Asset Class</h4>
+                    <p>Long-term averages (1926-2023, adjusted for inflation):</p>
+                    <ul>
+                        <li><strong>Large-cap stocks:</strong> ~7% real annual return</li>
+                        <li><strong>Small-cap stocks:</strong> ~8% real annual return</li>
+                        <li><strong>Long-term government bonds:</strong> ~2.5% real annual return</li>
+                        <li><strong>Treasury Bills:</strong> ~0.5% real annual return</li>
+                        <li><strong>Gold:</strong> ~1% real annual return</li>
+                    </ul>
+                    
+                    <h4>The Rule of 72 and Inflation</h4>
+                    <p>The Rule of 72 can also show how quickly inflation erodes purchasing power:</p>
+                    <ul>
+                        <li><strong>2% inflation:</strong> Purchasing power halves in 36 years</li>
+                        <li><strong>3% inflation:</strong> Purchasing power halves in 24 years</li>
+                        <li><strong>4% inflation:</strong> Purchasing power halves in 18 years</li>
+                        <li><strong>6% inflation:</strong> Purchasing power halves in 12 years</li>
+                    </ul>
+                    
+                    <h4>Inflation and Retirement Planning</h4>
+                    <p>Inflation has a particularly significant impact on retirement planning:</p>
+                    <ul>
+                        <li><strong>Fixed income erosion:</strong> Pensions and annuities lose buying power</li>
+                        <li><strong>Healthcare costs:</strong> Medical expenses often rise faster than general inflation</li>
+                        <li><strong>Long time horizon:</strong> 20-30 years of retirement magnifies inflation's impact</li>
+                        <li><strong>Social Security adjustments:</strong> COLA adjustments help but may not fully keep pace</li>
+                    </ul>
+                    
+                    <h4>Practical Inflation Protection Strategies</h4>
+                    <ul>
+                        <li><strong>Diversify across asset classes:</strong> Don't rely on a single investment type</li>
+                        <li><strong>Consider international exposure:</strong> Different countries experience different inflation rates</li>
+                        <li><strong>Maintain some cash:</strong> For opportunities during market volatility</li>
+                        <li><strong>Review regularly:</strong> Adjust portfolio as inflation expectations change</li>
+                        <li><strong>Focus on quality:</strong> Companies with pricing power perform better during inflation</li>
+                        <li><strong>Consider floating-rate debt:</strong> Interest payments adjust with rates</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Economic Indicators -->
+        <section class="calculator-section" style="background: #f8f9fa;">
+            <div class="container">
+                <h2 class="primary-color">Key Economic Indicators</h2>
+                <div class="calculator-info">
+                    <h3>Monitoring Inflation Trends</h3>
+                    <p>Understanding key economic indicators can help you anticipate inflation trends and make informed investment decisions.</p>
+                    
+                    <h4>Primary Inflation Measures</h4>
+                    <ul>
+                        <li><strong>Consumer Price Index (CPI):</strong> Most widely watched inflation measure</li>
+                        <li><strong>Core CPI:</strong> Excludes volatile food and energy prices</li>
+                        <li><strong>Producer Price Index (PPI):</strong> Wholesale price changes, leading indicator</li>
+                        <li><strong>Personal Consumption Expenditures (PCE):</strong> Fed's preferred inflation measure</li>
+                        <li><strong>GDP Deflator:</strong> Broadest measure of price changes in the economy</li>
+                    </ul>
+                    
+                    <h4>Federal Reserve Policy</h4>
+                    <p>The Federal Reserve uses various tools to control inflation:</p>
+                    <ul>
+                        <li><strong>Federal Funds Rate:</strong> Primary tool for controlling short-term interest rates</li>
+                        <li><strong>Quantitative Easing:</strong> Buying bonds to increase money supply</li>
+                        <li><strong>Forward Guidance:</strong> Communication about future policy intentions</li>
+                        <li><strong>Inflation Target:</strong> Current target of 2% annual inflation</li>
+                    </ul>
+                    
+                    <h4>Global Inflation Factors</h4>
+                    <p>Modern inflation is influenced by global factors:</p>
+                    <ul>
+                        <li><strong>Supply Chain Disruptions:</strong> COVID-19 highlighted global interconnectedness</li>
+                        <li><strong>Energy Prices:</strong> Oil and gas price volatility affects broader prices</li>
+                        <li><strong>Currency Exchange Rates:</strong> Weak currencies can import inflation</li>
+                        <li><strong>Trade Policies:</strong> Tariffs and trade restrictions affect prices</li>
+                        <li><strong>Demographic Trends:</strong> Aging populations affect labor markets and inflation</li>
+                    </ul>
+                    
+                    <p><strong>Stay Informed:</strong> Monitor economic data releases from the Bureau of Labor Statistics, Federal Reserve economic data (FRED), and financial news sources to stay current on inflation trends.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FinanceTools.info</h3>
+                    <p>Your trusted source for professional financial calculators and planning tools.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="loans.html">Loan Calculators</a></li>
+                        <li><a href="retirement.html">Retirement Planning</a></li>
+                        <li><a href="interest.html">Interest Calculators</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FinanceTools.info. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

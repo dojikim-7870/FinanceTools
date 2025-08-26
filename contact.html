@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | FinanceTools</title>
+    <meta name="description" content="Contact FinanceTools.info for support, feedback, or questions about our financial calculators and planning tools. We're here to help with your financial planning needs.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <h1>FinanceTools</h1>
+                </a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="loans.html" class="nav-link">Loans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="income-tax.html" class="nav-link">Income & Tax</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="interest.html" class="nav-link">Interest</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="assets.html" class="nav-link">Assets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="retirement.html" class="nav-link">Retirement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="inflation.html" class="nav-link">Inflation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>We're here to help with your questions, feedback, and support needs. Reach out to us anytime.</p>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="calculator-section">
+            <div class="container">
+                <div class="calculator-container">
+                    <div class="calculator-form">
+                        <h2 class="primary-color">Send Us a Message</h2>
+                        <form id="contact-form" onsubmit="handleContactForm(event)">
+                            <div class="form-group">
+                                <label for="contact-name">Full Name *</label>
+                                <input type="text" id="contact-name" name="name" required placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email Address *</label>
+                                <input type="email" id="contact-email" name="email" required placeholder="Enter your email address">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-subject">Subject *</label>
+                                <select id="contact-subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="calculator-issue">Calculator Issue/Bug Report</option>
+                                    <option value="feature-request">Feature Request</option>
+                                    <option value="feedback">Feedback/Suggestion</option>
+                                    <option value="technical-support">Technical Support</option>
+                                    <option value="partnership">Partnership/Business</option>
+                                    <option value="media">Media/Press</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message">Message *</label>
+                                <textarea id="contact-message" name="message" required rows="6" placeholder="Please provide details about your inquiry, including any calculator names, specific issues, or suggestions you have."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" id="contact-newsletter" name="newsletter">
+                                    Subscribe to our newsletter for financial tips and updates
+                                </label>
+                            </div>
+                            <button type="submit" class="calculate-btn">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <div class="calculator-results">
+                        <h3>Get in Touch</h3>
+                        <p>We value your feedback and are committed to providing excellent support for all users of FinanceTools.info.</p>
+                        
+                        <div style="margin: 2rem 0;">
+                            <h4 style="color: #003366; margin-bottom: 1rem;">Response Times</h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">
+                                    <strong>General Inquiries:</strong> 24-48 hours
+                                </li>
+                                <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">
+                                    <strong>Technical Issues:</strong> 12-24 hours
+                                </li>
+                                <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">
+                                    <strong>Bug Reports:</strong> 6-12 hours
+                                </li>
+                                <li style="padding: 0.5rem 0;">
+                                    <strong>Business Inquiries:</strong> 2-3 business days
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div style="margin: 2rem 0;">
+                            <h4 style="color: #003366; margin-bottom: 1rem;">Alternative Contact Methods</h4>
+                            <p><strong>Email:</strong> support@financetools.info</p>
+                            <p><strong>Business Inquiries:</strong> business@financetools.info</p>
+                            <p><strong>Technical Issues:</strong> tech@financetools.info</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="calculator-section" style="background: #f8f9fa;">
+            <div class="container">
+                <h2 class="primary-color">Frequently Asked Questions</h2>
+                <div class="calculator-info">
+                    <h3>Before contacting us, you might find your answer below:</h3>
+                    
+                    <div style="margin: 2rem 0;">
+                        <h4 style="color: #003366; margin-bottom: 0.5rem;">Are your calculators accurate?</h4>
+                        <p>Our calculators use industry-standard formulas and are designed to provide accurate estimates. However, they are for educational purposes only and should not replace professional financial advice. Actual results may vary based on specific terms, conditions, and individual circumstances.</p>
+                    </div>
+                    
+                    <div style="margin: 2rem 0;">
+                        <h4 style="color: #003366; margin-bottom: 0.5rem;">Do you store my financial data?</h4>
+                        <p>No, we do not store your personal financial information. All calculations are performed locally in your web browser, and your data is not transmitted to or stored on our servers. See our <a href="privacy.html" style="color: #003366;">Privacy Policy</a> for more details.</p>
+                    </div>
+                    
+                    <div style="margin: 2rem 0;">
+                        <h4 style="color: #003366; margin-bottom: 0.5rem;">Is FinanceTools.info really free?</h4>
+                        <p>Yes, all our calculators and educational content are completely free to use. We support our service through advertising partnerships, but we never charge users for access to our tools.</p>
+                    </div>
+                    
+                    <div style="margin: 2rem 0;">
+                        <h4 style="color: #003366; margin-bottom: 0.5rem;">Can I use these calculators for commercial purposes?</h4>
+                        <p>Our calculators are designed for personal use and professional reference. If you're a financial advisor or professional, you may reference our tools, but please ensure you provide appropriate disclaimers to your clients. See our <a href="terms.html" style="color: #003366;">Terms of Service</a> for full details.</p>
+                    </div>
+                    
+                    <div style="margin: 2rem 0;">
+                        <h4 style="color: #003366; margin-bottom: 0.5rem;">How often do you update your calculators?</h4>
+                        <p>We regularly review and update our calculators to reflect changes in tax laws, interest rates, and financial regulations. Major updates are implemented as needed, and we continuously monitor for accuracy and functionality improvements.</p>
+                    </div>
+                    
+                    <div style="margin: 2rem 0;">
+                        <h4 style="color: #003366; margin-bottom: 0.5rem;">Do you provide personalized financial advice?</h4>
+                        <p>No, we do not provide personalized financial advice. Our tools and content are for educational purposes only. For specific financial advice tailored to your situation, please consult with a qualified financial advisor, tax professional, or other appropriate specialist.</p>
+                    </div>
+                    
+                    <div style="margin: 2rem 0;">
+                        <h4 style="color: #003366; margin-bottom: 0.5rem;">Can I suggest new calculator features?</h4>
+                        <p>Absolutely! We welcome suggestions for new calculators and features. Please use the contact form above with the subject "Feature Request" and provide details about what you'd like to see added to our platform.</p>
+                    </div>
+                    
+                    <div style="margin: 2rem 0;">
+                        <h4 style="color: #003366; margin-bottom: 0.5rem;">What browsers do you support?</h4>
+                        <p>Our calculators work on all modern web browsers including Chrome, Firefox, Safari, and Edge. We recommend using the latest version of your preferred browser for the best experience. Our site is also optimized for mobile devices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Section -->
+        <section class="calculator-section">
+            <div class="container">
+                <h2 class="primary-color">Technical Support</h2>
+                <div class="calculator-info">
+                    <h3>Experiencing Technical Issues?</h3>
+                    <p>If you're experiencing problems with our calculators or website, here are some troubleshooting steps you can try:</p>
+                    
+                    <h4>Common Solutions</h4>
+                    <ul>
+                        <li><strong>Refresh the page:</strong> Press F5 or Ctrl+R (Cmd+R on Mac) to reload the page</li>
+                        <li><strong>Clear browser cache:</strong> Clear your browser's cache and cookies, then try again</li>
+                        <li><strong>Disable extensions:</strong> Temporarily disable browser extensions/add-ons that might interfere</li>
+                        <li><strong>Try a different browser:</strong> Test the calculator in another browser</li>
+                        <li><strong>Check your connection:</strong> Ensure you have a stable internet connection</li>
+                        <li><strong>Enable JavaScript:</strong> Make sure JavaScript is enabled in your browser settings</li>
+                    </ul>
+                    
+                    <h4>When Reporting Issues</h4>
+                    <p>To help us resolve technical issues quickly, please include the following information:</p>
+                    <ul>
+                        <li>Your operating system (Windows, Mac, iOS, Android)</li>
+                        <li>Browser name and version</li>
+                        <li>Specific calculator or page where the issue occurs</li>
+                        <li>Description of what happened vs. what you expected</li>
+                        <li>Any error messages you received</li>
+                        <li>Steps to reproduce the issue</li>
+                    </ul>
+                    
+                    <h4>Business Partnerships</h4>
+                    <p>Interested in partnering with FinanceTools.info? We welcome opportunities to collaborate with:</p>
+                    <ul>
+                        <li>Financial services companies</li>
+                        <li>Educational institutions</li>
+                        <li>Content publishers and bloggers</li>
+                        <li>Software developers and fintech companies</li>
+                        <li>Financial advisors and consultants</li>
+                    </ul>
+                    <p>Please use the contact form above or email us at business@financetools.info for partnership inquiries.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FinanceTools.info</h3>
+                    <p>Your trusted source for professional financial calculators and planning tools.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="loans.html">Loan Calculators</a></li>
+                        <li><a href="retirement.html">Retirement Planning</a></li>
+                        <li><a href="interest.html">Interest Calculators</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FinanceTools.info. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Contact form handler
+        function handleContactForm(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const name = document.getElementById('contact-name').value;
+            const email = document.getElementById('contact-email').value;
+            const subject = document.getElementById('contact-subject').value;
+            const message = document.getElementById('contact-message').value;
+            const newsletter = document.getElementById('contact-newsletter').checked;
+            
+            // Basic validation
+            if (!name || !email || !subject || !message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Create email content
+            const emailSubject = `FinanceTools Contact: ${subject}`;
+            const emailBody = `Name: ${name}%0D%0AEmail: ${email}%0D%0ASubject: ${subject}%0D%0ANewsletter: ${newsletter ? 'Yes' : 'No'}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
+            
+            // Create mailto link
+            const mailtoLink = `mailto:support@financetools.info?subject=${encodeURIComponent(emailSubject)}&body=${emailBody}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            alert('Thank you for your message! Your email client should open with the pre-filled message. If it doesn\'t open automatically, please email us directly at support@financetools.info');
+            
+            // Reset form
+            document.getElementById('contact-form').reset();
+        }
+    </script>
+</body>
+</html>

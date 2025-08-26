@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan & Mortgage Calculators | FinanceTools</title>
+    <meta name="description" content="Calculate personal loan payments, mortgage costs, and amortization schedules. Professional loan calculators for accurate financial planning.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <h1>FinanceTools</h1>
+                </a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="loans.html" class="nav-link">Loans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="income-tax.html" class="nav-link">Income & Tax</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="interest.html" class="nav-link">Interest</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="assets.html" class="nav-link">Assets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="retirement.html" class="nav-link">Retirement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="inflation.html" class="nav-link">Inflation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Loan & Mortgage Calculators</h1>
+                <p>Calculate loan payments, mortgage costs, and understand your borrowing obligations with our comprehensive loan calculation tools.</p>
+            </div>
+        </section>
+
+        <!-- Personal Loan Calculator -->
+        <section class="calculator-section">
+            <div class="container">
+                <h2 class="primary-color">Personal Loan Calculator</h2>
+                <div class="calculator-container">
+                    <div class="calculator-form">
+                        <h3>Loan Details</h3>
+                        <div class="form-group">
+                            <label for="loan-amount">Loan Amount ($)</label>
+                            <input type="number" id="loan-amount" placeholder="10000" min="0" step="100">
+                        </div>
+                        <div class="form-group">
+                            <label for="interest-rate">Annual Interest Rate (%)</label>
+                            <input type="number" id="interest-rate" placeholder="5.50" min="0" max="50" step="0.01">
+                        </div>
+                        <div class="form-group">
+                            <label for="loan-term">Loan Term (Years)</label>
+                            <input type="number" id="loan-term" placeholder="5" min="1" max="30" step="1">
+                        </div>
+                        <button type="button" class="calculate-btn" onclick="calculatePersonalLoan()">Calculate Loan Payment</button>
+                    </div>
+                    <div class="calculator-results" id="loan-results">
+                        <h3>Your Results</h3>
+                        <p>Enter your loan details to see monthly payments, total interest, and payment breakdown.</p>
+                    </div>
+                </div>
+
+                <div class="calculator-info">
+                    <h3>Understanding Personal Loans</h3>
+                    <p>Personal loans are unsecured loans that can be used for various purposes including debt consolidation, home improvements, or unexpected expenses. Unlike mortgages or auto loans, personal loans don't require collateral, which typically results in higher interest rates.</p>
+                    
+                    <p><strong>Key factors affecting your loan:</strong></p>
+                    <ul>
+                        <li><strong>Credit Score:</strong> Higher credit scores typically qualify for lower interest rates</li>
+                        <li><strong>Income:</strong> Steady income demonstrates your ability to repay the loan</li>
+                        <li><strong>Debt-to-Income Ratio:</strong> Lower ratios indicate better financial health</li>
+                        <li><strong>Loan Term:</strong> Longer terms mean lower monthly payments but more interest paid overall</li>
+                    </ul>
+                    
+                    <p>Use this calculator to compare different loan scenarios and find the payment structure that best fits your budget. Consider both the monthly payment amount and the total interest cost when making your decision.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mortgage Calculator -->
+        <section class="calculator-section" style="background: #f8f9fa;">
+            <div class="container">
+                <h2 class="primary-color">Mortgage Payment Calculator</h2>
+                <div class="calculator-container">
+                    <div class="calculator-form">
+                        <h3>Mortgage Details</h3>
+                        <div class="form-group">
+                            <label for="home-price">Home Price ($)</label>
+                            <input type="number" id="home-price" placeholder="300000" min="0" step="1000">
+                        </div>
+                        <div class="form-group">
+                            <label for="down-payment">Down Payment ($)</label>
+                            <input type="number" id="down-payment" placeholder="60000" min="0" step="1000">
+                        </div>
+                        <div class="form-group">
+                            <label for="mortgage-rate">Annual Interest Rate (%)</label>
+                            <input type="number" id="mortgage-rate" placeholder="3.50" min="0" max="20" step="0.01">
+                        </div>
+                        <div class="form-group">
+                            <label for="mortgage-term">Loan Term (Years)</label>
+                            <select id="mortgage-term">
+                                <option value="15">15 Years</option>
+                                <option value="20">20 Years</option>
+                                <option value="25">25 Years</option>
+                                <option value="30" selected>30 Years</option>
+                            </select>
+                        </div>
+                        <button type="button" class="calculate-btn" onclick="calculateMortgage()">Calculate Mortgage</button>
+                    </div>
+                    <div class="calculator-results" id="mortgage-results">
+                        <h3>Your Mortgage Results</h3>
+                        <p>Enter your home price, down payment, and loan terms to calculate your monthly mortgage payment.</p>
+                    </div>
+                </div>
+
+                <div class="calculator-info">
+                    <h3>Mortgage Planning Guide</h3>
+                    <p>A mortgage is likely the largest financial commitment you'll make. Understanding your monthly payment and total loan cost is crucial for making informed decisions about homeownership.</p>
+                    
+                    <p><strong>Important mortgage considerations:</strong></p>
+                    <ul>
+                        <li><strong>Down Payment:</strong> Larger down payments reduce monthly payments and may eliminate PMI</li>
+                        <li><strong>Interest Rate:</strong> Even small rate differences significantly impact total cost over 15-30 years</li>
+                        <li><strong>Loan Term:</strong> Shorter terms have higher monthly payments but much lower total interest</li>
+                        <li><strong>Additional Costs:</strong> Remember to budget for property taxes, insurance, and maintenance</li>
+                    </ul>
+                    
+                    <p>The general rule is that your monthly mortgage payment shouldn't exceed 28% of your gross monthly income. Use this calculator to explore different scenarios and find a comfortable payment level for your budget.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Amortization Information -->
+        <section class="calculator-section">
+            <div class="container">
+                <h2 class="primary-color">Understanding Loan Amortization</h2>
+                <div class="calculator-info">
+                    <h3>What is Loan Amortization?</h3>
+                    <p>Loan amortization is the process of paying off a debt over time through regular payments. Each payment consists of both principal (the amount borrowed) and interest. In the early years of the loan, most of your payment goes toward interest. As time progresses, more goes toward paying down the principal balance.</p>
+                    
+                    <h3>How Amortization Works</h3>
+                    <p>With each payment you make, the principal balance decreases, which means the interest portion of your next payment will be slightly less. This creates an accelerating effect where you pay off the principal faster as the loan matures.</p>
+                    
+                    <p><strong>Key amortization concepts:</strong></p>
+                    <ul>
+                        <li><strong>Front-loaded Interest:</strong> Early payments are mostly interest</li>
+                        <li><strong>Principal Acceleration:</strong> Later payments pay off more principal</li>
+                        <li><strong>Extra Payments:</strong> Additional principal payments can save significant interest</li>
+                        <li><strong>Refinancing:</strong> Restarting amortization can affect your payment structure</li>
+                    </ul>
+                    
+                    <h3>Benefits of Understanding Amortization</h3>
+                    <p>Understanding your amortization schedule helps you:</p>
+                    <ul>
+                        <li>See how much interest you'll pay over the life of the loan</li>
+                        <li>Determine the impact of making extra payments</li>
+                        <li>Plan for refinancing decisions</li>
+                        <li>Understand equity building in your home or asset</li>
+                    </ul>
+                    
+                    <p>Use our loan calculators above to see how different loan terms and rates affect your amortization schedule and total interest costs.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FinanceTools.info</h3>
+                    <p>Your trusted source for professional financial calculators and planning tools.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="loans.html">Loan Calculators</a></li>
+                        <li><a href="retirement.html">Retirement Planning</a></li>
+                        <li><a href="interest.html">Interest Calculators</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FinanceTools.info. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

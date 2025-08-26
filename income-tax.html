@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income & Tax Calculators | FinanceTools</title>
+    <meta name="description" content="Calculate take-home pay, income taxes, and capital gains tax. Professional tax planning calculators for accurate financial planning.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <h1>FinanceTools</h1>
+                </a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="loans.html" class="nav-link">Loans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="income-tax.html" class="nav-link">Income & Tax</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="interest.html" class="nav-link">Interest</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="assets.html" class="nav-link">Assets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="retirement.html" class="nav-link">Retirement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="inflation.html" class="nav-link">Inflation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Income & Tax Calculators</h1>
+                <p>Calculate your take-home pay, understand tax obligations, and plan for capital gains with our comprehensive tax calculation tools.</p>
+            </div>
+        </section>
+
+        <!-- Take-Home Pay Calculator -->
+        <section class="calculator-section">
+            <div class="container">
+                <h2 class="primary-color">Take-Home Pay Calculator</h2>
+                <div class="calculator-container">
+                    <div class="calculator-form">
+                        <h3>Salary Information</h3>
+                        <div class="form-group">
+                            <label for="gross-salary">Annual Gross Salary ($)</label>
+                            <input type="number" id="gross-salary" placeholder="75000" min="0" step="1000">
+                        </div>
+                        <div class="form-group">
+                            <label for="federal-tax">Federal Tax Rate (%)</label>
+                            <input type="number" id="federal-tax" placeholder="22" min="0" max="37" step="0.1">
+                        </div>
+                        <div class="form-group">
+                            <label for="state-tax">State Tax Rate (%)</label>
+                            <input type="number" id="state-tax" placeholder="5" min="0" max="15" step="0.1">
+                        </div>
+                        <button type="button" class="calculate-btn" onclick="calculateTakeHomePay()">Calculate Take-Home Pay</button>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                            <em>Note: Social Security (6.2%) and Medicare (1.45%) taxes are automatically included in the calculation.</em>
+                        </p>
+                    </div>
+                    <div class="calculator-results" id="takehome-results">
+                        <h3>Your Take-Home Pay</h3>
+                        <p>Enter your salary and tax rates to see your actual take-home pay after all deductions.</p>
+                    </div>
+                </div>
+
+                <div class="calculator-info">
+                    <h3>Understanding Payroll Deductions</h3>
+                    <p>Your gross salary is not what you'll actually receive. Various taxes and deductions reduce your take-home pay. Understanding these deductions helps you budget effectively and plan your finances.</p>
+                    
+                    <p><strong>Common payroll deductions include:</strong></p>
+                    <ul>
+                        <li><strong>Federal Income Tax:</strong> Based on tax brackets, ranging from 10% to 37%</li>
+                        <li><strong>State Income Tax:</strong> Varies by state, from 0% to over 13%</li>
+                        <li><strong>Social Security:</strong> 6.2% on income up to $160,200 (2023)</li>
+                        <li><strong>Medicare:</strong> 1.45% on all income, plus 0.9% on income over $200,000</li>
+                        <li><strong>Health Insurance:</strong> Employer-sponsored health insurance premiums</li>
+                        <li><strong>Retirement Contributions:</strong> 401(k) or other retirement plan contributions</li>
+                    </ul>
+                    
+                    <p>This calculator provides an estimate of your take-home pay. Actual amounts may vary based on additional deductions, exemptions, and specific tax situations. Consider consulting with a tax professional for personalized advice.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tax Planning Section -->
+        <section class="calculator-section" style="background: #f8f9fa;">
+            <div class="container">
+                <h2 class="primary-color">Tax Planning Strategies</h2>
+                <div class="calculator-info">
+                    <h3>Maximizing Your Take-Home Pay</h3>
+                    <p>There are several legitimate strategies to optimize your tax situation and increase your take-home pay:</p>
+                    
+                    <h4>Pre-Tax Deductions</h4>
+                    <ul>
+                        <li><strong>401(k) Contributions:</strong> Reduce taxable income while saving for retirement</li>
+                        <li><strong>Health Savings Account (HSA):</strong> Triple tax advantage for medical expenses</li>
+                        <li><strong>Flexible Spending Account (FSA):</strong> Pre-tax dollars for healthcare and childcare</li>
+                        <li><strong>Health Insurance Premiums:</strong> Often deducted pre-tax</li>
+                    </ul>
+                    
+                    <h4>Tax Credits vs. Deductions</h4>
+                    <p><strong>Tax Credits</strong> reduce your tax liability dollar-for-dollar, while <strong>deductions</strong> reduce your taxable income. Credits are generally more valuable:</p>
+                    <ul>
+                        <li>Child Tax Credit</li>
+                        <li>Earned Income Tax Credit</li>
+                        <li>American Opportunity Tax Credit</li>
+                        <li>Lifetime Learning Credit</li>
+                    </ul>
+                    
+                    <h4>Year-End Tax Strategies</h4>
+                    <ul>
+                        <li>Maximize retirement contributions before year-end</li>
+                        <li>Consider tax-loss harvesting for investments</li>
+                        <li>Bunch deductions in alternating years</li>
+                        <li>Time income and expenses strategically</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capital Gains Information -->
+        <section class="calculator-section">
+            <div class="container">
+                <h2 class="primary-color">Capital Gains Tax Planning</h2>
+                <div class="calculator-info">
+                    <h3>Understanding Capital Gains Tax</h3>
+                    <p>Capital gains tax applies when you sell investments, real estate, or other assets for more than you paid. The tax rate depends on how long you held the asset and your income level.</p>
+                    
+                    <h4>Short-Term vs. Long-Term Capital Gains</h4>
+                    <p><strong>Short-Term Capital Gains</strong> (held for 1 year or less):</p>
+                    <ul>
+                        <li>Taxed as ordinary income at your marginal tax rate</li>
+                        <li>Can be as high as 37% for high earners</li>
+                        <li>No preferential treatment</li>
+                    </ul>
+                    
+                    <p><strong>Long-Term Capital Gains</strong> (held for more than 1 year):</p>
+                    <ul>
+                        <li>Preferential tax rates: 0%, 15%, or 20%</li>
+                        <li>Rate depends on your total income</li>
+                        <li>Significantly lower than ordinary income rates</li>
+                    </ul>
+                    
+                    <h4>2024 Long-Term Capital Gains Tax Rates</h4>
+                    <div style="overflow-x: auto; margin: 1rem 0;">
+                        <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+                            <thead>
+                                <tr style="background: #003366; color: white;">
+                                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Tax Rate</th>
+                                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Single</th>
+                                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Married Filing Jointly</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">0%</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Up to $47,025</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Up to $94,050</td>
+                                </tr>
+                                <tr style="background: #f8f9fa;">
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">15%</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">$47,026 - $518,900</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">$94,051 - $583,750</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">20%</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Over $518,900</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Over $583,750</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h4>Capital Gains Tax Strategies</h4>
+                    <ul>
+                        <li><strong>Hold investments for over one year</strong> to qualify for long-term rates</li>
+                        <li><strong>Tax-loss harvesting:</strong> Offset gains with losses</li>
+                        <li><strong>Asset location:</strong> Hold high-growth investments in tax-advantaged accounts</li>
+                        <li><strong>Timing:</strong> Realize gains in low-income years</li>
+                        <li><strong>Charitable giving:</strong> Donate appreciated assets to avoid capital gains</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FinanceTools.info</h3>
+                    <p>Your trusted source for professional financial calculators and planning tools.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="loans.html">Loan Calculators</a></li>
+                        <li><a href="retirement.html">Retirement Planning</a></li>
+                        <li><a href="interest.html">Interest Calculators</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FinanceTools.info. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

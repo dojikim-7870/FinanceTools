@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest Calculators | FinanceTools</title>
+    <meta name="description" content="Calculate compound interest and savings growth. Professional interest calculators to maximize your investment returns and savings potential.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <h1>FinanceTools</h1>
+                </a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="loans.html" class="nav-link">Loans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="income-tax.html" class="nav-link">Income & Tax</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="interest.html" class="nav-link">Interest</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="assets.html" class="nav-link">Assets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="retirement.html" class="nav-link">Retirement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="inflation.html" class="nav-link">Inflation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Interest Calculators</h1>
+                <p>Harness the power of compound interest and optimize your savings strategy with our professional interest calculation tools.</p>
+            </div>
+        </section>
+
+        <!-- Compound Interest Calculator -->
+        <section class="calculator-section">
+            <div class="container">
+                <h2 class="primary-color">Compound Interest Calculator</h2>
+                <div class="calculator-container">
+                    <div class="calculator-form">
+                        <h3>Investment Details</h3>
+                        <div class="form-group">
+                            <label for="principal">Initial Investment ($)</label>
+                            <input type="number" id="principal" placeholder="10000" min="0" step="100">
+                        </div>
+                        <div class="form-group">
+                            <label for="annual-rate">Annual Interest Rate (%)</label>
+                            <input type="number" id="annual-rate" placeholder="7.00" min="0" max="50" step="0.01">
+                        </div>
+                        <div class="form-group">
+                            <label for="compound-frequency">Compounding Frequency</label>
+                            <select id="compound-frequency">
+                                <option value="1">Annually</option>
+                                <option value="2">Semi-Annually</option>
+                                <option value="4">Quarterly</option>
+                                <option value="12" selected>Monthly</option>
+                                <option value="365">Daily</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="time-period">Time Period (Years)</label>
+                            <input type="number" id="time-period" placeholder="10" min="1" max="50" step="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="monthly-contribution">Monthly Contribution ($)</label>
+                            <input type="number" id="monthly-contribution" placeholder="500" min="0" step="50">
+                        </div>
+                        <button type="button" class="calculate-btn" onclick="calculateCompoundInterest()">Calculate Growth</button>
+                    </div>
+                    <div class="calculator-results" id="compound-results">
+                        <h3>Investment Growth Results</h3>
+                        <p>Enter your investment details to see how compound interest can grow your money over time.</p>
+                    </div>
+                </div>
+
+                <div class="calculator-info">
+                    <h3>The Magic of Compound Interest</h3>
+                    <p>Albert Einstein allegedly called compound interest "the eighth wonder of the world," saying "He who understands it, earns it... he who doesn't, pays it." Compound interest is the addition of interest to the principal sum, where the added interest also earns interest.</p>
+                    
+                    <p><strong>Key principles of compound interest:</strong></p>
+                    <ul>
+                        <li><strong>Time is your greatest ally:</strong> The earlier you start, the more dramatic the results</li>
+                        <li><strong>Frequency matters:</strong> More frequent compounding increases returns</li>
+                        <li><strong>Consistency pays off:</strong> Regular contributions accelerate wealth building</li>
+                        <li><strong>Rate of return impact:</strong> Small rate differences create large long-term differences</li>
+                    </ul>
+                    
+                    <h4>The Rule of 72</h4>
+                    <p>A quick way to estimate how long it takes for money to double: divide 72 by your annual return rate. For example, at 8% return, your money doubles in approximately 9 years (72 ÷ 8 = 9).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Savings Interest Information -->
+        <section class="calculator-section" style="background: #f8f9fa;">
+            <div class="container">
+                <h2 class="primary-color">Savings Account Interest</h2>
+                <div class="calculator-info">
+                    <h3>Understanding Savings Account Returns</h3>
+                    <p>While savings accounts offer safety and liquidity, their interest rates are typically much lower than investment returns. However, they play a crucial role in your overall financial strategy.</p>
+                    
+                    <h4>Types of Savings Accounts</h4>
+                    <ul>
+                        <li><strong>Traditional Savings:</strong> Low rates but high accessibility and FDIC insurance</li>
+                        <li><strong>High-Yield Savings:</strong> Online banks offering better rates</li>
+                        <li><strong>Money Market Accounts:</strong> Higher rates with some restrictions</li>
+                        <li><strong>Certificates of Deposit (CDs):</strong> Fixed rates for fixed terms</li>
+                    </ul>
+                    
+                    <h4>Annual Percentage Yield (APY)</h4>
+                    <p>APY represents the real rate of return on your savings, including the effect of compounding. This is the number to focus on when comparing savings accounts.</p>
+                    
+                    <h4>Maximizing Savings Growth</h4>
+                    <ul>
+                        <li>Shop around for the best APY rates</li>
+                        <li>Consider online banks for higher rates</li>
+                        <li>Maintain minimum balance requirements to avoid fees</li>
+                        <li>Set up automatic transfers to build savings consistently</li>
+                        <li>Use savings accounts for emergency funds and short-term goals</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investment vs Savings Comparison -->
+        <section class="calculator-section">
+            <div class="container">
+                <h2 class="primary-color">Investment vs. Savings Strategy</h2>
+                <div class="calculator-info">
+                    <h3>Building a Balanced Financial Plan</h3>
+                    <p>Understanding when to save versus when to invest is crucial for optimal financial growth. Both serve important but different purposes in your financial plan.</p>
+                    
+                    <h4>When to Use Savings Accounts</h4>
+                    <ul>
+                        <li><strong>Emergency Fund:</strong> 3-6 months of expenses in high-yield savings</li>
+                        <li><strong>Short-term Goals:</strong> Goals within 1-3 years (vacation, car down payment)</li>
+                        <li><strong>Safety Net:</strong> Money you cannot afford to lose</li>
+                        <li><strong>Liquidity Needs:</strong> Money you may need to access quickly</li>
+                    </ul>
+                    
+                    <h4>When to Consider Investing</h4>
+                    <ul>
+                        <li><strong>Long-term Goals:</strong> Goals 5+ years away (retirement, children's education)</li>
+                        <li><strong>Inflation Protection:</strong> Maintaining purchasing power over time</li>
+                        <li><strong>Growth Potential:</strong> Building wealth for major life goals</li>
+                        <li><strong>Tax Advantages:</strong> Using tax-advantaged accounts like 401(k)s and IRAs</li>
+                    </ul>
+                    
+                    <h4>Historical Returns Comparison</h4>
+                    <div style="overflow-x: auto; margin: 1rem 0;">
+                        <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+                            <thead>
+                                <tr style="background: #003366; color: white;">
+                                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Investment Type</th>
+                                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Average Annual Return</th>
+                                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Risk Level</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Savings Account</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">0.5% - 2.0%</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Very Low</td>
+                                </tr>
+                                <tr style="background: #f8f9fa;">
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Bonds</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">3% - 5%</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Low</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Stock Market (S&P 500)</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">10% - 11%</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Medium-High</td>
+                                </tr>
+                                <tr style="background: #f8f9fa;">
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Real Estate</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">8% - 12%</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Medium-High</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h4>The Power of Starting Early</h4>
+                    <p><strong>Example:</strong> Two people invest in the stock market with an average 8% return:</p>
+                    <ul>
+                        <li><strong>Person A</strong> invests $200/month starting at age 25 for 10 years, then stops</li>
+                        <li><strong>Person B</strong> invests $200/month starting at age 35 for 30 years</li>
+                        <li>At age 65: Person A has ~$525,000, Person B has ~$245,000</li>
+                    </ul>
+                    <p>Starting early gives Person A more than double the money despite investing for only 10 years!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FinanceTools.info</h3>
+                    <p>Your trusted source for professional financial calculators and planning tools.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="loans.html">Loan Calculators</a></li>
+                        <li><a href="retirement.html">Retirement Planning</a></li>
+                        <li><a href="interest.html">Interest Calculators</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FinanceTools.info. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

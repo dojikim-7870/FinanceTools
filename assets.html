@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset Management Tools | FinanceTools</title>
+    <meta name="description" content="Track your net worth and create effective budget plans. Professional asset management tools for comprehensive financial planning.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <h1>FinanceTools</h1>
+                </a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="loans.html" class="nav-link">Loans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="income-tax.html" class="nav-link">Income & Tax</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="interest.html" class="nav-link">Interest</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="assets.html" class="nav-link">Assets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="retirement.html" class="nav-link">Retirement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="inflation.html" class="nav-link">Inflation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Asset Management Tools</h1>
+                <p>Track your net worth and create effective budget plans with our comprehensive asset management and financial planning tools.</p>
+            </div>
+        </section>
+
+        <!-- Net Worth Calculator -->
+        <section class="calculator-section">
+            <div class="container">
+                <h2 class="primary-color">Net Worth Tracker</h2>
+                <div class="calculator-container">
+                    <div class="calculator-form">
+                        <h3>Assets</h3>
+                        <div class="form-group">
+                            <label for="cash">Cash & Savings ($)</label>
+                            <input type="number" id="cash" placeholder="25000" min="0" step="100">
+                        </div>
+                        <div class="form-group">
+                            <label for="investments">Investments ($)</label>
+                            <input type="number" id="investments" placeholder="75000" min="0" step="1000">
+                        </div>
+                        <div class="form-group">
+                            <label for="real-estate">Real Estate Value ($)</label>
+                            <input type="number" id="real-estate" placeholder="350000" min="0" step="5000">
+                        </div>
+                        <div class="form-group">
+                            <label for="other-assets">Other Assets ($)</label>
+                            <input type="number" id="other-assets" placeholder="15000" min="0" step="1000">
+                        </div>
+                        
+                        <h3 style="margin-top: 2rem;">Liabilities</h3>
+                        <div class="form-group">
+                            <label for="mortgage-debt">Mortgage Balance ($)</label>
+                            <input type="number" id="mortgage-debt" placeholder="200000" min="0" step="1000">
+                        </div>
+                        <div class="form-group">
+                            <label for="credit-cards">Credit Card Debt ($)</label>
+                            <input type="number" id="credit-cards" placeholder="5000" min="0" step="100">
+                        </div>
+                        <div class="form-group">
+                            <label for="other-loans">Other Loans ($)</label>
+                            <input type="number" id="other-loans" placeholder="15000" min="0" step="1000">
+                        </div>
+                        <div class="form-group">
+                            <label for="other-debts">Other Debts ($)</label>
+                            <input type="number" id="other-debts" placeholder="0" min="0" step="100">
+                        </div>
+                        <button type="button" class="calculate-btn" onclick="calculateNetWorth()">Calculate Net Worth</button>
+                    </div>
+                    <div class="calculator-results" id="networth-results">
+                        <h3>Your Net Worth Statement</h3>
+                        <p>Enter your assets and liabilities to calculate your total net worth and understand your financial position.</p>
+                    </div>
+                </div>
+
+                <div class="calculator-info">
+                    <h3>Understanding Net Worth</h3>
+                    <p>Net worth is the difference between what you own (assets) and what you owe (liabilities). It's the most comprehensive measure of your financial health and progress toward financial goals.</p>
+                    
+                    <p><strong>Assets typically include:</strong></p>
+                    <ul>
+                        <li><strong>Cash and Cash Equivalents:</strong> Checking, savings, money market accounts</li>
+                        <li><strong>Investments:</strong> Stocks, bonds, mutual funds, ETFs, retirement accounts</li>
+                        <li><strong>Real Estate:</strong> Primary residence, rental properties, land</li>
+                        <li><strong>Personal Property:</strong> Vehicles, jewelry, collectibles, furniture</li>
+                        <li><strong>Business Interests:</strong> Ownership stakes in businesses</li>
+                    </ul>
+                    
+                    <p><strong>Liabilities typically include:</strong></p>
+                    <ul>
+                        <li><strong>Mortgage Debt:</strong> Home loans, home equity lines of credit</li>
+                        <li><strong>Consumer Debt:</strong> Credit cards, personal loans</li>
+                        <li><strong>Vehicle Loans:</strong> Auto loans, motorcycle loans</li>
+                        <li><strong>Student Loans:</strong> Educational debt</li>
+                        <li><strong>Other Debts:</strong> Medical debt, tax liens, business loans</li>
+                    </ul>
+                    
+                    <h4>Net Worth Benchmarks by Age</h4>
+                    <p>While everyone's situation is different, here are median net worth figures by age group (Federal Reserve data):</p>
+                    <ul>
+                        <li><strong>Under 35:</strong> $13,900</li>
+                        <li><strong>35-44:</strong> $91,300</li>
+                        <li><strong>45-54:</strong> $168,600</li>
+                        <li><strong>55-64:</strong> $212,500</li>
+                        <li><strong>65-74:</strong> $266,400</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Budget Planning Section -->
+        <section class="calculator-section" style="background: #f8f9fa;">
+            <div class="container">
+                <h2 class="primary-color">Budget Planning Guide</h2>
+                <div class="calculator-info">
+                    <h3>Creating an Effective Budget</h3>
+                    <p>A budget is a plan for how you'll spend your money each month. It helps ensure you're living within your means and working toward your financial goals.</p>
+                    
+                    <h4>The 50/30/20 Rule</h4>
+                    <p>This popular budgeting framework allocates your after-tax income as follows:</p>
+                    <ul>
+                        <li><strong>50% for Needs:</strong> Housing, utilities, groceries, transportation, insurance, minimum debt payments</li>
+                        <li><strong>30% for Wants:</strong> Dining out, entertainment, hobbies, subscriptions, shopping</li>
+                        <li><strong>20% for Savings & Debt Repayment:</strong> Emergency fund, retirement, extra debt payments</li>
+                    </ul>
+                    
+                    <h4>Zero-Based Budgeting</h4>
+                    <p>With zero-based budgeting, you assign every dollar of income to a specific category until your income minus expenses equals zero. This method ensures every dollar has a purpose.</p>
+                    
+                    <h4>Essential Budget Categories</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                            <h5 style="color: #003366; margin-bottom: 0.5rem;">Fixed Expenses</h5>
+                            <ul style="list-style-type: none; padding-left: 0;">
+                                <li>• Rent/Mortgage</li>
+                                <li>• Insurance</li>
+                                <li>• Loan Payments</li>
+                                <li>• Subscriptions</li>
+                            </ul>
+                        </div>
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                            <h5 style="color: #003366; margin-bottom: 0.5rem;">Variable Expenses</h5>
+                            <ul style="list-style-type: none; padding-left: 0;">
+                                <li>• Groceries</li>
+                                <li>• Utilities</li>
+                                <li>• Transportation</li>
+                                <li>• Personal Care</li>
+                            </ul>
+                        </div>
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                            <h5 style="color: #003366; margin-bottom: 0.5rem;">Savings & Investments</h5>
+                            <ul style="list-style-type: none; padding-left: 0;">
+                                <li>• Emergency Fund</li>
+                                <li>• Retirement (401k/IRA)</li>
+                                <li>• Short-term Savings</li>
+                                <li>• Investment Account</li>
+                            </ul>
+                        </div>
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                            <h5 style="color: #003366; margin-bottom: 0.5rem;">Discretionary Spending</h5>
+                            <ul style="list-style-type: none; padding-left: 0;">
+                                <li>• Entertainment</li>
+                                <li>• Dining Out</li>
+                                <li>• Hobbies</li>
+                                <li>• Shopping</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h4>Budget Success Tips</h4>
+                    <ul>
+                        <li><strong>Track everything for a month</strong> to understand your spending patterns</li>
+                        <li><strong>Use budgeting apps or spreadsheets</strong> to monitor progress</li>
+                        <li><strong>Review and adjust monthly</strong> based on actual spending</li>
+                        <li><strong>Build in flexibility</strong> with a miscellaneous category</li>
+                        <li><strong>Automate savings</strong> to pay yourself first</li>
+                        <li><strong>Start small</strong> and gradually optimize your budget</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Asset Allocation Section -->
+        <section class="calculator-section">
+            <div class="container">
+                <h2 class="primary-color">Asset Allocation Strategy</h2>
+                <div class="calculator-info">
+                    <h3>Diversifying Your Investment Portfolio</h3>
+                    <p>Asset allocation is how you divide your investments among different asset classes (stocks, bonds, cash) to balance risk and return based on your goals, risk tolerance, and time horizon.</p>
+                    
+                    <h4>Common Asset Allocation Models</h4>
+                    <div style="overflow-x: auto; margin: 1.5rem 0;">
+                        <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+                            <thead>
+                                <tr style="background: #003366; color: white;">
+                                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Portfolio Type</th>
+                                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Stocks</th>
+                                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Bonds</th>
+                                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Cash</th>
+                                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Risk Level</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Conservative</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">30%</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">60%</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">10%</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Low</td>
+                                </tr>
+                                <tr style="background: #f8f9fa;">
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Moderate</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">60%</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">35%</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">5%</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Medium</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Aggressive</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">80%</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">15%</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">5%</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">High</td>
+                                </tr>
+                                <tr style="background: #f8f9fa;">
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Very Aggressive</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">95%</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">5%</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">0%</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Very High</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h4>Age-Based Asset Allocation</h4>
+                    <p>A common rule of thumb is to subtract your age from 100 to determine your stock allocation percentage. For example, a 30-year-old might have 70% stocks and 30% bonds.</p>
+                    
+                    <h4>Rebalancing Your Portfolio</h4>
+                    <p>Over time, market movements will shift your asset allocation. Rebalancing involves selling some investments and buying others to return to your target allocation. Consider rebalancing:</p>
+                    <ul>
+                        <li>Annually or when allocations drift more than 5% from targets</li>
+                        <li>When making new contributions to investments</li>
+                        <li>During major life changes or goal adjustments</li>
+                        <li>In tax-advantaged accounts to minimize tax implications</li>
+                    </ul>
+                    
+                    <h4>Beyond Stocks and Bonds</h4>
+                    <p>Consider diversifying further with:</p>
+                    <ul>
+                        <li><strong>International Stocks:</strong> Developed and emerging market exposure</li>
+                        <li><strong>Real Estate (REITs):</strong> Real estate investment trusts</li>
+                        <li><strong>Commodities:</strong> Gold, oil, agricultural products</li>
+                        <li><strong>Alternative Investments:</strong> Private equity, hedge funds (for accredited investors)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FinanceTools.info</h3>
+                    <p>Your trusted source for professional financial calculators and planning tools.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="loans.html">Loan Calculators</a></li>
+                        <li><a href="retirement.html">Retirement Planning</a></li>
+                        <li><a href="interest.html">Interest Calculators</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FinanceTools.info. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

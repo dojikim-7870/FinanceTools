@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retirement & Savings Planning | FinanceTools</title>
+    <meta name="description" content="Plan for retirement with 401(k), IRA, and retirement planning calculators. Professional tools to secure your financial future and retirement goals.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <h1>FinanceTools</h1>
+                </a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="loans.html" class="nav-link">Loans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="income-tax.html" class="nav-link">Income & Tax</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="interest.html" class="nav-link">Interest</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="assets.html" class="nav-link">Assets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="retirement.html" class="nav-link">Retirement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="inflation.html" class="nav-link">Inflation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Retirement & Savings Planning</h1>
+                <p>Secure your financial future with comprehensive retirement planning tools including 401(k), IRA, and retirement calculators.</p>
+            </div>
+        </section>
+
+        <!-- 401(k) Calculator -->
+        <section class="calculator-section">
+            <div class="container">
+                <h2 class="primary-color">401(k) Retirement Calculator</h2>
+                <div class="calculator-container">
+                    <div class="calculator-form">
+                        <h3>401(k) Details</h3>
+                        <div class="form-group">
+                            <label for="current-age">Current Age</label>
+                            <input type="number" id="current-age" placeholder="35" min="18" max="100" step="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="retirement-age">Retirement Age</label>
+                            <input type="number" id="retirement-age" placeholder="65" min="50" max="80" step="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="current-balance">Current 401(k) Balance ($)</label>
+                            <input type="number" id="current-balance" placeholder="50000" min="0" step="1000">
+                        </div>
+                        <div class="form-group">
+                            <label for="monthly-contrib">Monthly Contribution ($)</label>
+                            <input type="number" id="monthly-contrib" placeholder="500" min="0" step="50">
+                        </div>
+                        <div class="form-group">
+                            <label for="employer-match">Employer Match (%)</label>
+                            <input type="number" id="employer-match" placeholder="3" min="0" max="10" step="0.5">
+                        </div>
+                        <div class="form-group">
+                            <label for="expected-return">Expected Annual Return (%)</label>
+                            <input type="number" id="expected-return" placeholder="7" min="1" max="15" step="0.1">
+                        </div>
+                        <button type="button" class="calculate-btn" onclick="calculate401k()">Calculate 401(k) Growth</button>
+                    </div>
+                    <div class="calculator-results" id="401k-results">
+                        <h3>Your 401(k) Projection</h3>
+                        <p>Enter your 401(k) information to see how your retirement savings will grow over time.</p>
+                    </div>
+                </div>
+
+                <div class="calculator-info">
+                    <h3>Maximizing Your 401(k) Benefits</h3>
+                    <p>A 401(k) is one of the most powerful retirement savings tools available, offering tax advantages and often employer matching contributions that can significantly boost your retirement savings.</p>
+                    
+                    <h4>2024 401(k) Contribution Limits</h4>
+                    <ul>
+                        <li><strong>Employee Contribution Limit:</strong> $23,000 per year</li>
+                        <li><strong>Catch-up Contribution (Age 50+):</strong> Additional $7,500 per year</li>
+                        <li><strong>Total Contribution Limit:</strong> $69,000 per year (including employer match)</li>
+                        <li><strong>Total with Catch-up:</strong> $76,500 per year for those 50 and older</li>
+                    </ul>
+                    
+                    <h4>Types of 401(k) Plans</h4>
+                    <ul>
+                        <li><strong>Traditional 401(k):</strong> Pre-tax contributions, taxed upon withdrawal</li>
+                        <li><strong>Roth 401(k):</strong> After-tax contributions, tax-free withdrawals in retirement</li>
+                        <li><strong>Safe Harbor 401(k):</strong> Automatic employer contributions, no discrimination testing</li>
+                    </ul>
+                    
+                    <h4>Key 401(k) Strategies</h4>
+                    <ul>
+                        <li><strong>Get the full match:</strong> Always contribute enough to receive your full employer match</li>
+                        <li><strong>Increase contributions annually:</strong> Boost contributions by 1-2% each year</li>
+                        <li><strong>Use automatic increases:</strong> Many plans offer automatic escalation features</li>
+                        <li><strong>Consider Roth options:</strong> Especially beneficial for younger workers</li>
+                        <li><strong>Rebalance regularly:</strong> Maintain your target asset allocation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- IRA Information Section -->
+        <section class="calculator-section" style="background: #f8f9fa;">
+            <div class="container">
+                <h2 class="primary-color">Individual Retirement Accounts (IRAs)</h2>
+                <div class="calculator-info">
+                    <h3>Understanding IRA Options</h3>
+                    <p>Individual Retirement Accounts (IRAs) provide additional tax-advantaged ways to save for retirement, whether you have access to a workplace plan or not.</p>
+                    
+                    <h4>Traditional IRA</h4>
+                    <p><strong>How it works:</strong> Contributions may be tax-deductible, investments grow tax-deferred, withdrawals in retirement are taxed as ordinary income.</p>
+                    <ul>
+                        <li><strong>2024 Contribution Limit:</strong> $7,000 per year ($8,000 if age 50+)</li>
+                        <li><strong>Tax Deduction:</strong> May be limited if you have a workplace retirement plan</li>
+                        <li><strong>Required Distributions:</strong> Must start at age 73</li>
+                        <li><strong>Early Withdrawal:</strong> 10% penalty before age 59½ (with exceptions)</li>
+                    </ul>
+                    
+                    <h4>Roth IRA</h4>
+                    <p><strong>How it works:</strong> Contributions are made with after-tax dollars, investments grow tax-free, qualified withdrawals are tax-free.</p>
+                    <ul>
+                        <li><strong>2024 Contribution Limit:</strong> $7,000 per year ($8,000 if age 50+)</li>
+                        <li><strong>Income Limits:</strong> Phase-out begins at $138,000 (single) / $218,000 (married)</li>
+                        <li><strong>No Required Distributions:</strong> Can leave money to grow indefinitely</li>
+                        <li><strong>Contribution Access:</strong> Can withdraw contributions penalty-free anytime</li>
+                    </ul>
+                    
+                    <h4>IRA vs. Roth IRA Comparison</h4>
+                    <div style="overflow-x: auto; margin: 1.5rem 0;">
+                        <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+                            <thead>
+                                <tr style="background: #003366; color: white;">
+                                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Feature</th>
+                                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Traditional IRA</th>
+                                    <th style="padding: 0.75rem; border: 1px solid #ddd;">Roth IRA</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Tax Treatment</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Deductible now, taxed later</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Taxed now, tax-free later</td>
+                                </tr>
+                                <tr style="background: #f8f9fa;">
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Income Limits</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">No contribution limits</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">High-income phase-out</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Required Distributions</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Age 73</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">None during lifetime</td>
+                                </tr>
+                                <tr style="background: #f8f9fa;">
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Early Withdrawal</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Penalty on all withdrawals</td>
+                                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Contributions anytime</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h4>Backdoor Roth IRA Strategy</h4>
+                    <p>High earners who exceed Roth IRA income limits can use the "backdoor" method:</p>
+                    <ol>
+                        <li>Make a non-deductible contribution to a traditional IRA</li>
+                        <li>Convert the traditional IRA to a Roth IRA</li>
+                        <li>Pay taxes on any gains during the conversion</li>
+                    </ol>
+                    <p><em>Note: This strategy has tax implications and should be discussed with a financial advisor.</em></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Retirement Planning Section -->
+        <section class="calculator-section">
+            <div class="container">
+                <h2 class="primary-color">Comprehensive Retirement Planning</h2>
+                <div class="calculator-info">
+                    <h3>How Much Do You Need for Retirement?</h3>
+                    <p>Retirement planning involves determining how much money you'll need to maintain your desired lifestyle after you stop working. This requires careful consideration of expenses, income sources, and inflation.</p>
+                    
+                    <h4>Common Retirement Planning Rules</h4>
+                    <ul>
+                        <li><strong>The 4% Rule:</strong> Withdraw 4% of your portfolio in the first year, adjust for inflation thereafter</li>
+                        <li><strong>10x Income Rule:</strong> Save 10 times your final working year's income</li>
+                        <li><strong>80% Replacement Rule:</strong> Plan to replace 80% of your pre-retirement income</li>
+                        <li><strong>25x Expenses Rule:</strong> Save 25 times your annual expenses</li>
+                    </ul>
+                    
+                    <h4>Retirement Income Sources</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                            <h5 style="color: #003366; margin-bottom: 0.5rem;">Social Security</h5>
+                            <p>Government benefit based on your earnings history. Average benefit in 2024: $1,907/month.</p>
+                        </div>
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                            <h5 style="color: #003366; margin-bottom: 0.5rem;">Employer Plans</h5>
+                            <p>401(k), 403(b), pension plans, and other employer-sponsored retirement benefits.</p>
+                        </div>
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                            <h5 style="color: #003366; margin-bottom: 0.5rem;">Personal Savings</h5>
+                            <p>IRAs, taxable investment accounts, and other personal retirement savings.</p>
+                        </div>
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                            <h5 style="color: #003366; margin-bottom: 0.5rem;">Other Income</h5>
+                            <p>Part-time work, rental income, business income, or other sources.</p>
+                        </div>
+                    </div>
+                    
+                    <h4>Retirement Savings by Age Benchmarks</h4>
+                    <p>Fidelity suggests these retirement savings milestones based on your annual salary:</p>
+                    <ul>
+                        <li><strong>By age 30:</strong> 1x your annual salary</li>
+                        <li><strong>By age 40:</strong> 3x your annual salary</li>
+                        <li><strong>By age 50:</strong> 6x your annual salary</li>
+                        <li><strong>By age 60:</strong> 8x your annual salary</li>
+                        <li><strong>By age 67:</strong> 10x your annual salary</li>
+                    </ul>
+                    
+                    <h4>Retirement Planning Strategies</h4>
+                    <ul>
+                        <li><strong>Start early:</strong> Time is your most powerful tool for building wealth</li>
+                        <li><strong>Maximize employer matches:</strong> It's free money for your retirement</li>
+                        <li><strong>Increase contributions regularly:</strong> Boost savings with raises and bonuses</li>
+                        <li><strong>Diversify your accounts:</strong> Mix of traditional and Roth accounts</li>
+                        <li><strong>Plan for healthcare costs:</strong> Consider HSAs and long-term care insurance</li>
+                        <li><strong>Review and adjust:</strong> Regularly reassess your retirement plan</li>
+                    </ul>
+                    
+                    <h4>Common Retirement Planning Mistakes</h4>
+                    <ul>
+                        <li>Starting too late or not saving enough</li>
+                        <li>Not taking advantage of employer matches</li>
+                        <li>Cashing out 401(k)s when changing jobs</li>
+                        <li>Ignoring inflation in retirement planning</li>
+                        <li>Not planning for healthcare costs</li>
+                        <li>Having too conservative an investment approach when young</li>
+                        <li>Not diversifying retirement account types</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Security Section -->
+        <section class="calculator-section" style="background: #f8f9fa;">
+            <div class="container">
+                <h2 class="primary-color">Understanding Social Security Benefits</h2>
+                <div class="calculator-info">
+                    <h3>Social Security in Your Retirement Plan</h3>
+                    <p>Social Security provides a foundation of retirement income for most Americans. Understanding how benefits work can help you make informed decisions about when to claim and how to maximize your benefits.</p>
+                    
+                    <h4>How Social Security Benefits Are Calculated</h4>
+                    <ul>
+                        <li><strong>Earnings History:</strong> Based on your highest 35 years of earnings</li>
+                        <li><strong>Full Retirement Age:</strong> Varies by birth year (66-67 for those born 1943-1960)</li>
+                        <li><strong>Primary Insurance Amount (PIA):</strong> Your full benefit at full retirement age</li>
+                        <li><strong>Cost of Living Adjustments:</strong> Annual increases based on inflation</li>
+                    </ul>
+                    
+                    <h4>When to Claim Social Security</h4>
+                    <ul>
+                        <li><strong>Age 62 (Early):</strong> Reduced benefits (75-80% of full benefit)</li>
+                        <li><strong>Full Retirement Age:</strong> 100% of calculated benefit</li>
+                        <li><strong>Age 70 (Delayed):</strong> Increased benefits (132% of full benefit)</li>
+                    </ul>
+                    
+                    <h4>Strategies to Maximize Benefits</h4>
+                    <ul>
+                        <li><strong>Work at least 35 years:</strong> Replace lower-earning years with higher ones</li>
+                        <li><strong>Delay claiming until age 70:</strong> Earn delayed retirement credits</li>
+                        <li><strong>Coordinate with spouse:</strong> Optimize claiming strategies for couples</li>
+                        <li><strong>Consider tax implications:</strong> Social Security may be taxable</li>
+                    </ul>
+                    
+                    <p><strong>Important:</strong> Create an account at ssa.gov to view your estimated benefits and earnings history. Check annually to ensure accuracy.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FinanceTools.info</h3>
+                    <p>Your trusted source for professional financial calculators and planning tools.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="loans.html">Loan Calculators</a></li>
+                        <li><a href="retirement.html">Retirement Planning</a></li>
+                        <li><a href="interest.html">Interest Calculators</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FinanceTools.info. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
