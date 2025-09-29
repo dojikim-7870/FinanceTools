@@ -1,69 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>https://www.financetools.info/</loc>
+      <loc>https://financetools.info/</loc>
       <lastmod>2025-09-28</lastmod>
       <changefreq>daily</changefreq>
       <priority>1.0</priority>
    </url>
    <url>
-      <loc>https://www.financetools.info/loans.html</loc>
+      <loc>https://financetools.info/loans.html</loc>
       <lastmod>2025-09-28</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://www.financetools.info/income-tax.html</loc>
+      <loc>https://financetools.info/income-tax.html</loc>
       <lastmod>2025-09-28</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://www.financetools.info/interest.html</loc>
+      <loc>https://financetools.info/interest.html</loc>
       <lastmod>2025-09-28</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://www.financetools.info/assets.html</loc>
+      <loc>https://financetools.info/assets.html</loc>
       <lastmod>2025-09-28</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://www.financetools.info/retirement.html</loc>
+      <loc>https://financetools.info/retirement.html</loc>
       <lastmod>2025-09-28</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://www.financetools.info/inflation.html</loc>
+      <loc>https://financetools.info/inflation.html</loc>
       <lastmod>2025-09-28</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://www.financetools.info/about.html</loc>
+      <loc>https://financetools.info/about.html</loc>
       <lastmod>2025-09-28</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.5</priority>
    </url>
    <url>
-      <loc>https://www.financetools.info/privacy.html</loc>
+      <loc>https://financetools.info/privacy.html</loc>
       <lastmod>2025-09-28</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.3</priority>
    </url>
    <url>
-      <loc>https://www.financetools.info/terms.html</loc>
+      <loc>https://financetools.info/terms.html</loc>
       <lastmod>2025-09-28</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.3</priority>
    </url>
    <url>
-      <loc>https://www.financetools.info/contact.html</loc>
+      <loc>https://financetools.info/contact.html</loc>
       <lastmod>2025-09-28</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.3</priority>
    </url>
+
 </urlset>
