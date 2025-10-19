@@ -66,8 +66,7 @@
                 <div class="calculator-container">
                     <div class="calculator-form">
                         <h2 class="primary-color">Send Us a Message</h2>
-                        
-                        <form id="contact-form" action="https://formspree.io/f/mzzjwzng" method="POST">
+                        <form id="contact-form" action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
                             <div class="form-group">
                                 <label for="contact-name">Full Name *</label>
                                 <input type="text" id="contact-name" name="name" required placeholder="Enter your full name">
@@ -102,31 +101,56 @@
                             </div>
                             <button type="submit" class="calculate-btn">Send Message</button>
                         </form>
-                        <!-- 폼 제출 상태를 표시할 div -->
                         <div id="form-status" style="margin-top: 15px; font-weight: bold; text-align: center;"></div>
                     </div>
                     
+                   
                     <div class="calculator-results">
                         <h3>Get in Touch</h3>
-                        <p>We value your feedback and are committed to providing excellent support for all users of FinanceTools.info.</p>
-                        
-                        
+                        <p>We are dedicated to making FinanceTools.info the best financial resource available. Your questions, feedback, and suggestions are vital for our improvement. Please don't hesitate to reach out.</p>
                         
                         <div style="margin: 2rem 0;">
-                            <h4 style="color: #003366; margin-bottom: 1rem;">Alternative Contact Methods</h4>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#emailModal">
-                                Contact by Email
-                            </button>
+                            <h4 style="color: #003366; margin-bottom: 1rem;">Our Commitment to You</h4>
+                            <p>When you contact us, your message is read by a real person. We strive to provide timely and helpful responses to every inquiry. For the quickest response, please use the contact form and provide as much detail as possible.</p>
+                        </div>
+                        
+                        <div style="margin: 2rem 0;">
+                            <h4 style="color: #003366; margin-bottom: 1rem;">Expected Response Times</h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;"><strong>Technical & Bug Reports:</strong> 6-12 hours</li>
+                                <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;"><strong>General Inquiries:</strong> 24-48 hours</li>
+                                <li style="padding: 0.5rem 0;"><strong>Business Inquiries:</strong> 2-3 business days</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="margin: 2rem 0;">
+                            <h4 style="color: #003366; margin-bottom: 1rem;">Direct Email</h4>
+                            <p>For specific inquiries, you can also reach us via email:</p>
+                            <ul style="list-style-type: none; padding-left: 0;">
+                                <li><strong>Support:</strong> <a href="mailto:support@financetools.info">support@financetools.info</a></li>
+                                <li><strong>Partnerships:</strong> <a href="mailto:business@financetools.info">business@financetools.info</a></li>
+                            </ul>
+                        </div>
+
+                        <div style="margin: 2rem 0;">
+                            <h4 style="color: #003366; margin-bottom: 1rem;">Connect With Us</h4>
+                            <p>Follow us on our social channels for the latest updates and financial tips.</p>
+                             <ul style="list-style-type: none; padding-left: 0;">
+                                <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                                <li><a href="#" target="_blank" rel="noopener noreferrer">Twitter (X)</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        
+        <!-- FAQ Section 
         <section class="calculator-section" style="background: #f8f9fa;">
             <div class="container"><!-- FAQ content --></div>
         </section>
+        
+        <!-- Technical Support Section
         <section class="calculator-section">
             <div class="container"><!-- Technical Support content --></div>
         </section>
@@ -136,9 +160,8 @@
         <div class="container"><!-- footer content --></div>
     </footer>
 
-  
+    
     <script>
-        // Hamburger menu script
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
         if (hamburger) {
@@ -147,26 +170,19 @@
                 navMenu.classList.toggle('active');
             });
         }
-
-        // Formspree Contact Form Handler (AJAX)
         var form = document.getElementById("contact-form");
-        
         async function handleSubmit(event) {
             event.preventDefault();
             var status = document.getElementById("form-status");
             var data = new FormData(event.target);
             var submitButton = form.querySelector('button[type="submit"]');
-
             submitButton.disabled = true;
             submitButton.innerText = 'Sending...';
-            status.innerHTML = ''; 
-
+            status.innerHTML = '';
             fetch(event.target.action, {
                 method: form.method,
                 body: data,
-                headers: {
-                    'Accept': 'application/json'
-                }
+                headers: { 'Accept': 'application/json' }
             }).then(response => {
                 if (response.ok) {
                     status.innerHTML = "Thank you for your message! We will get back to you shortly.";
@@ -177,26 +193,26 @@
                         if (Object.hasOwn(data, 'errors')) {
                             status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
                         } else {
-                            status.innerHTML = "Oops! There was a problem submitting your form. Please try again later.";
+                            status.innerHTML = "Oops! There was a problem submitting your form.";
                         }
                         status.style.color = "red";
                     })
                 }
             }).catch(error => {
-                status.innerHTML = "Oops! There was a problem submitting your form. Please check your network connection.";
+                status.innerHTML = "Oops! There was a problem submitting your form.";
                 status.style.color = "red";
             }).finally(() => {
                 submitButton.disabled = false;
                 submitButton.innerText = 'Send Message';
             });
         }
-
         if (form) {
             form.addEventListener("submit", handleSubmit);
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
   
-    </div>
+
 </body>
 </html>
