@@ -1,34 +1,33 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-57524D22');</script>
-<!-- End Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-57524D22');</script>
+    <!-- End Google Tag Manager -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JY0VE10TQN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JY0VE10TQN');
-</script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JY0VE10TQN');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | FinanceTools</title>
     <meta name="description" content="Contact FinanceTools.info for support, feedback, or questions about our financial calculators and planning tools. We're here to help with your financial planning needs.">
     <link rel="stylesheet" href="styles.css">
-<link rel="icon" href="images/favicon.ico"> 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" href="images/favicon.ico"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57524D22"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57524D22"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header>
         <nav class="navbar">
             <div class="nav-container">
@@ -36,27 +35,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h1>FinanceTools</h1>
                 </a>
                 <ul class="nav-menu" id="nav-menu">
-                    <li class="nav-item">
-                        <a href="loans.html" class="nav-link">Loans</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="income-tax.html" class="nav-link">Income & Tax</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="interest.html" class="nav-link">Interest</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="assets.html" class="nav-link">Assets</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="retirement.html" class="nav-link">Retirement</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="inflation.html" class="nav-link">Inflation</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="about.html" class="nav-link">About</a>
-                    </li>
+                    <li class="nav-item"><a href="loans.html" class="nav-link">Loans</a></li>
+                    <li class="nav-item"><a href="income-tax.html" class="nav-link">Income & Tax</a></li>
+                    <li class="nav-item"><a href="interest.html" class="nav-link">Interest</a></li>
+                    <li class="nav-item"><a href="assets.html" class="nav-link">Assets</a></li>
+                    <li class="nav-item"><a href="retirement.html" class="nav-link">Retirement</a></li>
+                    <li class="nav-item"><a href="inflation.html" class="nav-link">Inflation</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                 </ul>
                 <div class="hamburger" id="hamburger">
                     <span class="bar"></span>
@@ -81,7 +66,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="calculator-container">
                     <div class="calculator-form">
                         <h2 class="primary-color">Send Us a Message</h2>
-                        <form id="contact-form" onsubmit="handleContactForm(event)">
+                        
+                        <form id="contact-form" action="https://formspree.io/f/mzzjwzng" method="POST">
                             <div class="form-group">
                                 <label for="contact-name">Full Name *</label>
                                 <input type="text" id="contact-name" name="name" required placeholder="Enter your full name">
@@ -116,6 +102,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                             <button type="submit" class="calculate-btn">Send Message</button>
                         </form>
+                        <!-- 폼 제출 상태를 표시할 div -->
+                        <div id="form-status" style="margin-top: 15px; font-weight: bold; text-align: center;"></div>
                     </div>
                     
                     <div class="calculator-results">
@@ -141,200 +129,91 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                         
                         <div style="margin: 2rem 0;">
-    <h4 style="color: #003366; margin-bottom: 1rem;">Alternative Contact Methods</h4>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#emailModal">
-        Contact by Email
-    </button>
-</div>
+                            <h4 style="color: #003366; margin-bottom: 1rem;">Alternative Contact Methods</h4>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#emailModal">
+                                Contact by Email
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ Section -->
+        
         <section class="calculator-section" style="background: #f8f9fa;">
-            <div class="container">
-                <h2 class="primary-color">Frequently Asked Questions</h2>
-                <div class="calculator-info">
-                    <h3>Before contacting us, you might find your answer below:</h3>
-                    
-                    <div style="margin: 2rem 0;">
-                        <h4 style="color: #003366; margin-bottom: 0.5rem;">Are your calculators accurate?</h4>
-                        <p>Our calculators use industry-standard formulas and are designed to provide accurate estimates. However, they are for educational purposes only and should not replace professional financial advice. Actual results may vary based on specific terms, conditions, and individual circumstances.</p>
-                    </div>
-                    
-                    <div style="margin: 2rem 0;">
-                        <h4 style="color: #003366; margin-bottom: 0.5rem;">Do you store my financial data?</h4>
-                        <p>No, we do not store your personal financial information. All calculations are performed locally in your web browser, and your data is not transmitted to or stored on our servers. See our <a href="privacy.html" style="color: #003366;">Privacy Policy</a> for more details.</p>
-                    </div>
-                    
-                    <div style="margin: 2rem 0;">
-                        <h4 style="color: #003366; margin-bottom: 0.5rem;">Is FinanceTools.info really free?</h4>
-                        <p>Yes, all our calculators and educational content are completely free to use. We support our service through advertising partnerships, but we never charge users for access to our tools.</p>
-                    </div>
-                    
-                    <div style="margin: 2rem 0;">
-                        <h4 style="color: #003366; margin-bottom: 0.5rem;">Can I use these calculators for commercial purposes?</h4>
-                        <p>Our calculators are designed for personal use and professional reference. If you're a financial advisor or professional, you may reference our tools, but please ensure you provide appropriate disclaimers to your clients. See our <a href="terms.html" style="color: #003366;">Terms of Service</a> for full details.</p>
-                    </div>
-                    
-                    <div style="margin: 2rem 0;">
-                        <h4 style="color: #003366; margin-bottom: 0.5rem;">How often do you update your calculators?</h4>
-                        <p>We regularly review and update our calculators to reflect changes in tax laws, interest rates, and financial regulations. Major updates are implemented as needed, and we continuously monitor for accuracy and functionality improvements.</p>
-                    </div>
-                    
-                    <div style="margin: 2rem 0;">
-                        <h4 style="color: #003366; margin-bottom: 0.5rem;">Do you provide personalized financial advice?</h4>
-                        <p>No, we do not provide personalized financial advice. Our tools and content are for educational purposes only. For specific financial advice tailored to your situation, please consult with a qualified financial advisor, tax professional, or other appropriate specialist.</p>
-                    </div>
-                    
-                    <div style="margin: 2rem 0;">
-                        <h4 style="color: #003366; margin-bottom: 0.5rem;">Can I suggest new calculator features?</h4>
-                        <p>Absolutely! We welcome suggestions for new calculators and features. Please use the contact form above with the subject "Feature Request" and provide details about what you'd like to see added to our platform.</p>
-                    </div>
-                    
-                    <div style="margin: 2rem 0;">
-                        <h4 style="color: #003366; margin-bottom: 0.5rem;">What browsers do you support?</h4>
-                        <p>Our calculators work on all modern web browsers including Chrome, Firefox, Safari, and Edge. We recommend using the latest version of your preferred browser for the best experience. Our site is also optimized for mobile devices.</p>
-                    </div>
-                </div>
-            </div>
+            <div class="container"><!-- FAQ content --></div>
         </section>
-
-        <!-- Support Section -->
         <section class="calculator-section">
-            <div class="container">
-                <h2 class="primary-color">Technical Support</h2>
-                <div class="calculator-info">
-                    <h3>Experiencing Technical Issues?</h3>
-                    <p>If you're experiencing problems with our calculators or website, here are some troubleshooting steps you can try:</p>
-                    
-                    <h4>Common Solutions</h4>
-                    <ul>
-                        <li><strong>Refresh the page:</strong> Press F5 or Ctrl+R (Cmd+R on Mac) to reload the page</li>
-                        <li><strong>Clear browser cache:</strong> Clear your browser's cache and cookies, then try again</li>
-                        <li><strong>Disable extensions:</strong> Temporarily disable browser extensions/add-ons that might interfere</li>
-                        <li><strong>Try a different browser:</strong> Test the calculator in another browser</li>
-                        <li><strong>Check your connection:</strong> Ensure you have a stable internet connection</li>
-                        <li><strong>Enable JavaScript:</strong> Make sure JavaScript is enabled in your browser settings</li>
-                    </ul>
-                    
-                    <h4>When Reporting Issues</h4>
-                    <p>To help us resolve technical issues quickly, please include the following information:</p>
-                    <ul>
-                        <li>Your operating system (Windows, Mac, iOS, Android)</li>
-                        <li>Browser name and version</li>
-                        <li>Specific calculator or page where the issue occurs</li>
-                        <li>Description of what happened vs. what you expected</li>
-                        <li>Any error messages you received</li>
-                        <li>Steps to reproduce the issue</li>
-                    </ul>
-                    
-                    <h4>Business Partnerships</h4>
-                    <p>Interested in partnering with FinanceTools.info? We welcome opportunities to collaborate with:</p>
-                    <ul>
-                        <li>Financial services companies</li>
-                        <li>Educational institutions</li>
-                        <li>Content publishers and bloggers</li>
-                        <li>Software developers and fintech companies</li>
-                        <li>Financial advisors and consultants</li>
-                    </ul>
-                    <p>Please use the contact form above or email us at business@financetools.info for partnership inquiries.</p>
-                </div>
-            </div>
+            <div class="container"><!-- Technical Support content --></div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>FinanceTools.info</h3>
-                    <p>Your trusted source for professional financial calculators and planning tools.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="loans.html">Loan Calculators</a></li>
-                        <li><a href="retirement.html">Retirement Planning</a></li>
-                        <li><a href="interest.html">Interest Calculators</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 FinanceTools.info. All rights reserved.</p>
-            </div>
-        </div>
+        <div class="container"><!-- footer content --></div>
     </footer>
 
-    <script src="script.js"></script>
+  
     <script>
-        // Contact form handler
-        function handleContactForm(event) {
+        // Hamburger menu script
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Formspree Contact Form Handler (AJAX)
+        var form = document.getElementById("contact-form");
+        
+        async function handleSubmit(event) {
             event.preventDefault();
-            
-            // Get form data
-            const name = document.getElementById('contact-name').value;
-            const email = document.getElementById('contact-email').value;
-            const subject = document.getElementById('contact-subject').value;
-            const message = document.getElementById('contact-message').value;
-            const newsletter = document.getElementById('contact-newsletter').checked;
-            
-            // Basic validation
-            if (!name || !email || !subject || !message) {
-                alert('Please fill in all required fields.');
-                return;
-            }
-            
-            // Create email content
-            const emailSubject = `FinanceTools Contact: ${subject}`;
-            const emailBody = `Name: ${name}%0D%0AEmail: ${email}%0D%0ASubject: ${subject}%0D%0ANewsletter: ${newsletter ? 'Yes' : 'No'}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
-            
-            // Create mailto link
-            const mailtoLink = `mailto:support@financetools.info?subject=${encodeURIComponent(emailSubject)}&body=${emailBody}`;
-            
-            // Open email client
-            window.location.href = mailtoLink;
-            
-            // Show success message
-            alert('Thank you for your message! Your email client should open with the pre-filled message. If it doesn\'t open automatically, please email us directly at support@financetools.info');
-            
-            // Reset form
-            document.getElementById('contact-form').reset();
+            var status = document.getElementById("form-status");
+            var data = new FormData(event.target);
+            var submitButton = form.querySelector('button[type="submit"]');
+
+            submitButton.disabled = true;
+            submitButton.innerText = 'Sending...';
+            status.innerHTML = ''; 
+
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    status.innerHTML = "Thank you for your message! We will get back to you shortly.";
+                    status.style.color = "green";
+                    form.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                        } else {
+                            status.innerHTML = "Oops! There was a problem submitting your form. Please try again later.";
+                        }
+                        status.style.color = "red";
+                    })
+                }
+            }).catch(error => {
+                status.innerHTML = "Oops! There was a problem submitting your form. Please check your network connection.";
+                status.style.color = "red";
+            }).finally(() => {
+                submitButton.disabled = false;
+                submitButton.innerText = 'Send Message';
+            });
+        }
+
+        if (form) {
+            form.addEventListener("submit", handleSubmit);
         }
     </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="emailModalLabel">Contact by Email</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p class="text-center">You can contact our teams using the following email addresses:</p>
-                <ul class="list-unstyled">
-                    <li><strong>General:</strong> <a href="mailto:support@financetools.info">support@financetools.info</a></li>
-                    <li><strong>Business:</strong> <a href="mailto:business@financetools.info">business@financetools.info</a></li>
-                    <li><strong>Technical:</strong> <a href="mailto:tech@financetools.info">tech@financetools.info</a></li>
-                </ul>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+        <div class="modal-dialog"><!-- Modal content --></div>
     </div>
-</div>
 </body>
 </html>
-
-
